@@ -1,17 +1,16 @@
-// function play (){
-//     // show the home section
-//     const homeSection = document.getElementById('Home-screen');
-//     // console.log(homeSection.classList);
-//     homeSection.classList.add('hidden');
+// function play(){
+//     // hide the home section
+//    const homeSection = document.getElementById('Home-screen');
+//    homeSection.classList.add('hidden');
 
-//     // show the playground
-//     const playgroundSection = document.getElementById('playground');
-//     // console.log(playgroundSection.classList)
-//     playgroundSection.classList.remove('hidden');
+//     // show the play ground section
 
+//     const playGround = document.getElementById('play-ground');
+//     playGround.classList.remove('hidden');
+    
 // }
 
 function play(){
-    hideElementById('Home-screen');
-    showElementById('play-ground');
+    const homeSection = hideHomeSectionById('Home-screen');
+    const playGround = showThePlayGroundSection('play-ground');
 }

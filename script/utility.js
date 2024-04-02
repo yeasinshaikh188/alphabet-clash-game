@@ -1,11 +1,11 @@
-function hideElementById(elementId){
-    const element = document.getElementById(elementId);
-    element.classList.add('hidden');
+function hideHomeSectionById (elementbyID){
+    const getHomeSection = document.getElementById(elementbyID);
+    getHomeSection.classList.add('hidden');
+
 }
 
-// show playground section
-
-function showElementById (elementId){
-    const element = document.getElementById(elementId);
-    element.classList.remove('hidden');
+function showThePlayGroundSection (elementbyID){
+    const getPlayGroundSEction = document.getElementById(elementbyID);
+    getPlayGroundSEction.classList.remove('hidden');
+    
 }

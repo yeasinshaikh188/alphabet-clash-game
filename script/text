@@ -1,0 +1,103 @@
+// function play (){
+//     // show the home section
+//     const homeSection = document.getElementById('Home-screen');
+//     // console.log(homeSection.classList);
+//     homeSection.classList.add('hidden');
+
+//     // show the playground
+//     const playgroundSection = document.getElementById('playground');
+//     // console.log(playgroundSection.classList)
+//     playgroundSection.classList.remove('hidden');
+
+// }
+
+
+// function eventHandlerButtonPress (){
+//     console.log('keyboard event press');
+// }
+// document.addEventListener('keyup', eventHandlerButtonPress)
+function eventHandlerButtonPress(event){
+    const playarPressed = event.key;
+    console.log(event.key);
+}
+document.addEventListener('keyup', eventHandlerButtonPress)
+
+
+
+
+
+
+
+
+
+function continueGame (){
+    const alphebet = getRandomAlphaBet ();
+    console.log('your alphabet is', alphebet);
+
+
+    const current = document.getElementById('current');
+    current.innerText = alphebet;
+
+
+    setBackgroundColorById(alphebet);
+}
+
+
+
+function play(){
+    hideElementById('Home-screen');
+    showElementById('paly-ground');
+    continueGame();
+}
+
+
+
+// second 
+function hideElementById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.add('hidden');
+}
+
+// show playground section
+
+
+// 
+function setBackgroundColorById (elementId){
+   const element = document.getElementById(elementId);
+   element.classList.add('bg-orange-300');
+//    return element;
+}
+
+function showElementById (elementId){
+    const element = document.getElementById(elementId);
+    element.classList.remove('hidden');
+}
+
+
+// 
+
+// function getRandomAlphaBet  (){
+//     const stringAlphaBet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+//     const randomNumber = Math.random()*25;
+//     const rounNumber = Math.round(randomNumber);
+//     console.log(rounNumber);
+
+//     const alphebet = stringAlphaBet[rounNumber];
+//     // console.log(alphebet, randomNumber);
+//     return alphebet;
+// }
+
+
+function getRandomAlphaBet(){
+    const stringAlphabet = 'abcdefghijklmnopqrstuvwxyz';
+    const alphabets = stringAlphabet.split('');
+
+    const randomAlphabet = Math.random()*25;
+    const index = Math.round(randomAlphabet);
+
+     const alphabet = alphabets[index];
+     return alphabet;
+
+
+}
