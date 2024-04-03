@@ -10,7 +10,16 @@
     
 // }
 
+function continuneGame (){
+    const alphabet = continune();
+    const getAlphabet = document.getElementById('current');
+    getAlphabet.innerText = alphabet;
+    setBackgrounColor(alphabet);
+}
+
 function play(){
     const homeSection = hideHomeSectionById('Home-screen');
     const playGround = showThePlayGroundSection('play-ground');
+    continuneGame()
+    
 }
